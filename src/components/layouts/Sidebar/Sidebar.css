@@ -1,0 +1,140 @@
+.sidebar {
+	--sidebar-line: var(--error-line, #e2e9ea);
+	--sidebar-muted: var(--error-muted, #7a898e);
+	--sidebar-white: var(--error-white, #ffffff);
+	--sidebar-mint: var(--error-mint, #42dfbc);
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: var(--sidebar-white);
+	border-right: 1px solid var(--sidebar-line);
+}
+
+.sidebar-brand {
+	min-height: 76px;
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	padding: 0 18px;
+	border-bottom: 1px solid var(--sidebar-line);
+}
+
+.sidebar-brand__mark {
+	width: 34px;
+	height: 34px;
+	display: grid;
+	place-items: center;
+	border-radius: 8px;
+	background: var(--sidebar-mint);
+	color: #163a35;
+	font-size: 15px;
+	font-weight: 800;
+}
+
+.sidebar .sidebar-brand__name {
+	font-size: 14px;
+	font-weight: 750;
+	line-height: 1.25;
+}
+
+.sidebar .sidebar-brand__caption {
+	margin-top: 3px;
+	color: var(--sidebar-muted);
+	font-size: 9px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.sidebar-navigation {
+	padding: 26px 11px;
+}
+
+.sidebar .sidebar-navigation__label {
+	margin: 0 10px 12px;
+	color: #91a0a4;
+	font-size: 9px;
+	font-weight: 750;
+	letter-spacing: 0.1em;
+}
+
+.sidebar-navigation__item {
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 0 10px;
+	border-left: 3px solid #12bd9a;
+	border-radius: 5px;
+	background: #eaf9f5;
+}
+
+.sidebar-navigation__icon {
+	width: 21px;
+	height: 21px;
+	display: grid;
+	place-items: center;
+	border: 1px solid #d7ebe6;
+	border-radius: 5px;
+	color: var(--error-mint-dark, #087e6c);
+	font-size: 12px;
+}
+
+.sidebar .sidebar-navigation__text {
+	color: #28685d;
+	font-size: 12px;
+	font-weight: 650;
+}
+
+.sidebar__footer {
+	min-height: 68px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: auto;
+	padding: 0 15px;
+	border-top: 1px solid var(--sidebar-line);
+}
+
+.sidebar__avatar {
+	width: 29px;
+	height: 29px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background: #e8f6f2;
+	color: #177b68;
+	font-size: 10px;
+	font-weight: 750;
+}
+
+.sidebar .sidebar__account {
+	font-size: 11px;
+	font-weight: 650;
+}
+
+.sidebar .sidebar__account-caption {
+	margin-top: 2px;
+	color: var(--sidebar-muted);
+	font-size: 10px;
+}
+
+@media (max-width: 600px) {
+	.sidebar {
+		position: static;
+		height: auto;
+		border-right: 0;
+	}
+
+	.sidebar-brand {
+		min-height: 62px;
+		border-bottom: 1px solid var(--sidebar-line);
+	}
+
+	.sidebar-navigation,
+	.sidebar__footer {
+		display: none;
+	}
+}

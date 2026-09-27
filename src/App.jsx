@@ -1,13 +1,17 @@
-import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import Error404 from './components/Pages/Error404/error404.jsx'
+import LinksList from './components/Pages/LinksList/linkList.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-     <h1>Vite + React</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LinksList />} />
+        <Route path="/links" element={<LinksList />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

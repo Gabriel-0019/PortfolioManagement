@@ -1,0 +1,75 @@
+
+.topbar {
+	--topbar-white: var(--error-white, #ffffff);
+	--topbar-line: var(--error-line, #e2e9ea);
+	height: 62px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 28px;
+	background: var(--topbar-white);
+	border-bottom: 1px solid var(--topbar-line);
+}
+
+.topbar-breadcrumb,
+.topbar__status,
+.topbar__right {
+	display: flex;
+	align-items: center;
+}
+
+.topbar__right {
+	gap: 12px;
+	margin-left: auto;
+}
+
+.topbar-breadcrumb {
+	gap: 10px;
+}
+
+.topbar .topbar-breadcrumb__parent,
+.topbar .topbar-breadcrumb__separator {
+	color: #8a989c;
+	font-size: 11px;
+}
+
+.topbar .topbar-breadcrumb__current {
+	color: #39494d;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.topbar__status {
+	gap: 7px;
+	padding: 6px 9px;
+	border: 1px solid #e7edee;
+	border-radius: 20px;
+	background: #fbfcfc;
+}
+
+.topbar__status-dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #e99a59;
+}
+
+.topbar .topbar__status .MuiTypography-root {
+	color: #78878b;
+	font-size: 10px;
+}
+
+@media (max-width: 600px) {
+	.topbar {
+		height: 50px;
+		padding: 0 16px;
+	}
+
+	.topbar__status {
+		padding: 5px 7px;
+	}
+
+	.topbar .topbar__status .MuiTypography-root {
+		font-size: 9px;
+	}
+}
